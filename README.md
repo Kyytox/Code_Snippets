@@ -61,11 +61,11 @@ bucket = "AWS_BUCKET_NAME"
 path_file = f"s3://{bucket}/xxxx/parquet_file.parquet"
 
 wr.s3.to_parquet(df,
-				 path_file,
-				 partition_cols=['column_name'], 
-				 dataset=True,
-				 mode="append", 
-				 compression='snappy')
+		 path_file,
+		 partition_cols=['column_name'], 
+		 dataset=True,
+		 mode="append", 
+		 compression='snappy')
 ```
 
 
