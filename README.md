@@ -13,8 +13,6 @@ Collection of code snippets, development hacks,useful tips and tricks
 		* [Secrets Scope](#secrets-scope)
 		* [Get parquet file from AWS S3](#get-parquet-file-from-aws-s3)
 
-</br>
-</br>
 
 # Python 
 
