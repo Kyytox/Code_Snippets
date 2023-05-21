@@ -1,5 +1,5 @@
 # Code Snippets
-Collection of code snippets, development hacks,useful tips and tricks
+Collection of code snippets, development hacks, useful tips and tricks
 
 # Contents
 
