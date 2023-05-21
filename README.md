@@ -19,7 +19,6 @@ Collection of code snippets, development hacks,useful tips and tricks
 &nbsp;
 ## AWS S3 
 
-
 ### Init S3 Client 
 ```python 
 import boto3
