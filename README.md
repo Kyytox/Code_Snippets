@@ -73,11 +73,11 @@ wr.s3.to_parquet(df,
 ### Secrets Scope
 
 #### 1. Personal Acces Token 
-1. In your Databricks workspace, click your Databricks username in the top bar, and then select **User Settings** from the drop down.
-2.  On the **Access tokens** tab, click **Generate new token**.
-3.  (Optional) Enter a comment that helps you to identify this token in the future, and change the token’s default lifetime of 90 days. To create a token with no lifetime (not recommended), leave the **Lifetime (days)** box empty (blank).
-4.  Click **Generate**.    
-5.  Copy the displayed token, and then click **Done**.
+  1. In your Databricks workspace, click your Databricks username in the top bar, and then select **User Settings** from the drop down.
+  2.  On the **Access tokens** tab, click **Generate new token**.
+  3.  (Optional) Enter a comment that helps you to identify this token in the future, and change the token’s default lifetime of 90 days. To create a token with no lifetime (not recommended),   leave the **Lifetime (days)** box empty (blank).
+  4.  Click **Generate**.    
+  5.  Copy the displayed token, and then click **Done**.
 &nbsp;
 
 #### 2. Databricks CLI 
