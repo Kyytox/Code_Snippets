@@ -1,11 +1,11 @@
-# Code_Snippets
+# Code Snippets
 Collection of code snippets, development hacks,useful tips and tricks
 
 # Contents
 
 * [Python](#python)
-	* [AWS S3](#init-aws-s3)
-		* [S3 Client](#s3-client)
+	* [AWS S3](#aws-s3)
+		* [Init S3 Client](#init-s3-client)
 		* [Get parquet file](#get-parquet-file)
 		* [Send file to S3 ](#send-file-to-s3 )
 		* [Send Partitionned Parquet file to S3](#send-partitionned-parquet-file-to-s3)
@@ -15,9 +15,11 @@ Collection of code snippets, development hacks,useful tips and tricks
 
 
 # Python 
+&nbsp;
 
+
+***
 ## AWS S3 
-
 ### Init S3 Client 
 ```python 
 import boto3
@@ -25,7 +27,6 @@ import boto3
 s3 = boto3.client('s3', aws_access_key_id="AWS_ACCESS_KEY",
 				  aws_secret_access_key="AWS_SECRET_KEY",
 				  region_name="AWS_REGION")
-
 ```
 &nbsp;
 
@@ -65,8 +66,10 @@ wr.s3.to_parquet(df,
 		 compression='snappy')
 ```
 &nbsp;
+&nbsp;
 
 
+***
 ## Databricks
 ### Secrets Scope
 
@@ -82,13 +85,11 @@ wr.s3.to_parquet(df,
 ```bash 
 pip install databricks-cli
 ```
-&nbsp;
 
 configure Databricks CLI 
 ```bash 
 databricks configure --token
 ```
-&nbsp;
 
 in console fill
 ```console 
@@ -96,27 +97,23 @@ Databricks Host (should begin with https://): <workspace URL>
 
 Token: <Personal Acces Token>
 ```
-&nbsp;
 
 #### 3. Create Secrets Scope
 Create Scope with Databricks CLI 
 ```bash 
 databricks secrets create-scope --scope <scope-name>
 ```
-&nbsp;
 
 #### 4. Create Secrets 
 Create secrets in scope 
 ```bash 
 databricks secrets put --scope <scope-name> --key <key> --string-value <value> 
 ```
-&nbsp;
 
 List Secrets 
 ```bash 
 databricks secrets list --scope <scope-name>
 ```
-&nbsp;
 
 #### 5. Read Secrets in Notebooks 
 ```python 
@@ -134,7 +131,6 @@ import boto3
 import io
 import pandas as pd
 ```
-&nbsp;
 
 Get secrets, for AWS credentials
 ```python 
@@ -142,7 +138,6 @@ Get secrets, for AWS credentials
 AWS_ACCESS_KEY_ID = dbutils.secrets.get(scope = "name_scope", key = "ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = dbutils.secrets.get(scope = "name_scope", key = "SECRET_KEY")
 ```
-&nbsp;
 
 Init Bucket parameter and client S3 
 ```python
@@ -156,7 +151,6 @@ s3 = boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY_ID,
 		aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
 		region_name=AWS_REGION)
 ```
-&nbsp;
 
 Get parquet file 
 ```python
