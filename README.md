@@ -15,8 +15,7 @@ Collection of code snippets, development hacks,useful tips and tricks
 
 
 # Python 
-\
-&nbsp;
+
 ## AWS S3 
 
 ### Init S3 Client 
