@@ -17,8 +17,6 @@ Collection of code snippets, development hacks,useful tips and tricks
 # Python 
 \
 &nbsp;
-\
-&nbsp;
 ## AWS S3 
 
 
