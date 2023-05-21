@@ -126,7 +126,7 @@ AWS_SECRET_ACCESS_KEY = dbutils.secrets.get(scope = <scope-name>, key = <key>)
 
 
 ### Get parquet file from AWS S3 
-Create a Notebok 
+Create a Notebook 
 
 ```python 
 import boto3
